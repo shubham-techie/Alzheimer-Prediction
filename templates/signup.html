@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/signup.css') }}">
+{% endblock %}
+
+{% block content %}
+<!-- Registration Section -->
+<section id="signup">
+    <div class="signup-container flex">
+
+        <div class="signup-form">
+            <h2 class="form-title">Sign up</h2>
+
+        {% with messages=get_flashed_messages() %}
+            {% if messages %}
+        <div class="flash-error">
+            <strong>Error : </strong>{{ messages[0] }}
+        </div>
+            {% endif %}
+            {% endwith %}
+            <form method="POST" action="/signup">
+                <div class="form-grp">
+                    <label for="name">
+                        <i class="fas fa-user"></i>
+                    </label>
+                    <input type="text" name="name" id="name" placeholder="Your Full Name">
+                </div>
+
+                <div class="form-grp">
+                    <label for="email">
+                        <i class="fas fa-envelope"></i>
+                    </label>
+                    <input type="email" name="email" id="email" placeholder="Your Email">
+                </div>
+
+                <div class="form-grp">
+                    <label for="mobile">
+                        <i class="fas fa-mobile-alt"></i>
+                    </label>
+                    <input type="tel" name="mobile" id="mobile" placeholder="Your Mobile Number">
+                </div>
+
+                <div class="form-grp">
+                    <label for="dob">
+                        <i class="fas fa-calendar-alt"></i>
+                    </label>
+                    <input type="date" name="dob" id="dob" placeholder="Your DOB">
+                </div>
+
+                <div class="form-grp">
+                    <label for="gender">
+                        <i class="fas fa-male"></i>
+                        Gender
+                    </label>
+
+                    <select id="gender" name="gender" class="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="none">Prefer Not to Say</option>
+                    </select>
+                </div>
+
+                <div class="form-grp">
+                    <label for="license">
+                        <i class="fas fa-id-badge"></i>
+                    </label>
+                    <input type="text" name="license" id="license" placeholder="Your License Number">
+                </div>
+
+                <div class="form-grp">
+                    <label for="password">
+                        <i class="fas fa-key"></i>
+                    </label>
+                    <input type="password" name="password" id="password" placeholder="Password">
+                </div>
+
+                <div class="form-grp">
+                    <label for="confirm-password">
+                        <i class="fas fa-key"></i>
+                    </label>
+                    <input type="password" name="confirm-password" id="confirm-password" placeholder="Repeat your Password">
+                </div>
+
+                <div class="form-grp">
+                    <input type="submit" name="signup" class="submit-form" value="Register">
+                </div>
+            </form>
+        </div>
+
+        <div class="signup-image">
+            <figure>
+                <img src="{{ url_for('static', filename='images/signup.png') }}">
+            </figure>
+
+            <a href="{{ url_for('auth.login') }}">I am already member</a>
+        </div>
+
+    </div>
+</section>
+<!-- Registration Section End -->
+
+{% endblock %}

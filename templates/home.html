@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- Home Section -->
+<section id="home">
+    <div class="home-container flex">
+        <div class="left-section">
+            <h1>Medical Image Classification</h1>
+            <h2>Alzheimer's Prediction</h2>
+
+            <a href="{{ url_for('main.prediction') }}">Get Started</a>
+        </div>
+
+        <div></div>
+
+        <div class="right-section">
+            <img src="{{ url_for('static', filename='images/home-img.jpg')}}" class="home-img">
+        </div>
+
+    </div>
+</section>
+<!-- Home Section End -->
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "layout.html" %} {% block title %}Predict{% endblock %} {% block head %} {{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/prediction.css') }}"> {% endblock %} {%
+block content %}
+<section id="predict">
+    <div class="predict-container">
+        <h1>Predict Alzheimer</h1>
+        <form action="/prediction" method="POST" enctype="multipart/form-data">
+            <div class="image-file">
+
+                <div class="choose-image">
+                    <input type="file" accept=".png, .jpg, .jpeg" class="image" name="image" id="image"
+                        onchange="loadFile(event)">
+                    <label for="image">Upload image</label>
+                </div>
+
+                <div class="image-preview" id="image-preview">
+                    <img id="preview">
+
+                    {% if image %}
+                    <img id="preview" src="{{ url_for('static', filename=image) }}">
+                    {% endif %}
+                </div>
+
+                <div class=predict-btn>
+                    <input type="submit" onClick="hide()" name="predict" value="Predict">
+                </div>
+
+            </div>
+        </form>
+
+        {% if result %}
+        <div class="result flex">
+            <h3>Prediction : &nbsp;</h3>
+            <h4>{{ result }} Disease</h4>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<script type="text/javascript" src="{{ url_for('static', filename='javascript/predict.js') }}"></script>
+{% endblock %}
