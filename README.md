@@ -1,5 +1,7 @@
 # Alzheimer-Prediction
 
+Web app designed to predict Alzheimer Disease using MRI images.
+
 #### Output -
 #### Home Page :
 ![image](https://user-images.githubusercontent.com/85562020/158177417-ed5ec1b9-1d3a-4c6f-9cce-f51ce5c296fd.png)
@@ -13,3 +15,4 @@
 #### Prediction page :
 ![image](https://user-images.githubusercontent.com/85562020/158177603-468bd22b-99d5-4622-bbe9-1a5204d0f1a9.png)
 
+(**Note** : model size is too large to upload here)
