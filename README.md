@@ -1,6 +1,6 @@
 # Alzheimer-Prediction
 
-Web app designed to predict Alzheimer Disease using MRI images.
+Web app designed using **FLASK web-framework** to predict Alzheimer Disease using MRI images.
 
 #### Output -
 #### Home Page :
@@ -15,4 +15,4 @@ Web app designed to predict Alzheimer Disease using MRI images.
 #### Prediction page :
 ![image](https://user-images.githubusercontent.com/85562020/158177603-468bd22b-99d5-4622-bbe9-1a5204d0f1a9.png)
 
-(**Note** : model size is too large to upload here)
+(**Note** : model.h5 size is too large to upload here)
