@@ -13,6 +13,6 @@ Web app designed using **FLASK web-framework** to predict Alzheimer Disease usin
 ![image](https://user-images.githubusercontent.com/85562020/158177557-162c1b84-01c5-45f3-828b-b110211ebb75.png)
 
 #### Prediction page :
-![image](https://user-images.githubusercontent.com/85562020/158177603-468bd22b-99d5-4622-bbe9-1a5204d0f1a9.png)
+![image](https://user-images.githubusercontent.com/85562020/169704879-ba5fcf40-2811-4a82-a649-57066bd102ff.png)
 
 (**Note** : model.h5 size is too large to upload here)
